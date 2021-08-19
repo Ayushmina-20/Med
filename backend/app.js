@@ -26,7 +26,7 @@ app.get('/' , (req , res)=>{
 });
 app.post('/allUsers',async(req,res)=>{
     console.log("hello Doctor")
-    const user=await User.findOne({appdoc:req.body.email});
+    const user=await User.find({appdoc:req.body.email});
     console.log(user)
     res.send(user)
 })
